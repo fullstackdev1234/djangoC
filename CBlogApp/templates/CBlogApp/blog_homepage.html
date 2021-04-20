@@ -1,0 +1,402 @@
+<body class="rtl_main_header">
+    <!-- lang_wrapper Start -->
+    <div class="hs_lang_wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <ul class="icon_list_news social_icon_topheader2">
+                        <li><a href="#"><i class="fab fa-facebook-f mt-2"></i></a></li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter mt-2"></i>
+                                </a>
+                        </li>
+                        <li><a href="#"><i class="fab fa-linkedin-in mt-2"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g mt-2"></i></a></li>
+                    </ul>
+                    </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div id="google_translate_element"></div>
+                </div>		
+            </div>
+        </div>
+    </div>
+    <!-- lang_wrapper end -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- navi wrapper End -->
+    <!-- top header wrapper start -->
+    <div class="page_title_section">
+
+        <div class="page_header">
+            <div class="container">
+                <div class="row">
+                    <!-- section_heading start -->
+                    <div class="col-lg-9 col-md-9 col-12 col-sm-8">
+
+                        <h1>Blog</h1>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-12 col-sm-4">
+                        <div class="sub_title_section">
+                            <ul class="sub_title">
+                                <li> <a href="/"> Home </a>&nbsp; / &nbsp; </li>
+                                <li>Blog</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- top header wrapper end -->
+
+    <!--job listing filter  wrapper start-->
+    <div class="job_filter_listing_wrapper jb_cover rowMB">
+        <div class="container">
+            <div class="row pl-3 pt-5 blogDiv">
+                <div class="row pl-3 d-flex w-100 justify-content-between">
+                    <div><h4 class="blogtitle">Top News</h4></div>
+                    <div><span class="blogDate">Monday, 8 April</span></div>
+                </div>
+                <div class="row pl-3 pt-3">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="row mr-2 pb-2">
+                            <a href="{% url 'blog_news' %}">
+                                <img class="blogImg blogTitleImg" src="https://ichef.bbc.co.uk/wwhp/624/cpsprodpb/A621/production/_117892524_066659202.jpg" alt="logo" width="550px" />
+                                <p class="centered">Article </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="row mr-2 pb-2">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 blogT blog">
+                                <a href="#">
+                                    <img class="blogImg" src="https://ichef.bbc.co.uk/wwhp/304/cpsprodpb/C7F4/production/_117888115_gettyimages-1222508245.jpg" alt="logo" height="150px" width="255px" />
+                                    <p class="centered">Article 1</p>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 blogT blog">
+                                <a href="#">
+                                    <img class="blogImg" src="https://ichef.bbc.co.uk/wwhp/304/cpsprodpb/4AB9/production/_117892191_malaga-tourist.jpg" alt="logo" height="150px" width="255px" />
+                                    <p class="centered">Article 2</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mr-2">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 blogT blog">
+                                <a href="#">
+                                    <img class="blogImg" src="https://ichef.bbc.co.uk/wwhp/624/cpsprodpb/FD29/production/_117890846_whatsubject.jpg" alt="logo" height="150px" width="255px" />
+                                    <p class="centered">Article 3</p>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-12 blog blogT">
+                                <a href="#">
+                                    <img class="blogImg" src="https://ichef.bbc.co.uk/wwhp/304/ibroadcast/images/live/p0/9d/1x/p09d1xww.jpg" alt="logo" height="150px" width="255px" />
+                                    <p class="centered">Article 4</p>
+                                </a>   
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+
+            <div class="row pl-3 pt-5">
+                <div class="row pl-3">
+                    <h4>
+                        <a href="#" class="blogtitle">Blog</a>
+                    </h4>
+                </div>
+                <div class="row pl-3 pt-3">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div class="row mr-2 pb-2">
+                            <a href="{% url 'blog_demo_page' %}">
+                                <img class="blogImg" src="https://ichef.bbc.co.uk/wwhp/624/cpsprodpb/17065/production/_117890349_gettyimages-1311488747.jpg" alt="logo" width="350px" />
+                            </a>
+                            </div>
+                        <div class="row mr-3">
+                            <h5>
+                                <a href="{% url 'blog_demo_page' %}" class="blogtitle">Lorem Ipsum is simply dummy text of the printing.</a>
+                            </h5>
+                            <p class="pb-2">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                            </p>
+                            <p>
+                                <h6>
+                                    <a href="{% url 'blog_demo_page' %}">LATIN LITERATURE</a>
+                                </h6>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 blogT blogPT">
+                            <div class="row mr-2 pb-2">
+                                <a href="{% url 'blog_demo_page' %}">
+                                    <img class="blogImg" src="https://ichef.bbc.co.uk/wwhp/624/cpsprodpb/17065/production/_117890349_gettyimages-1311488747.jpg" alt="logo" width="350px" />
+                                </a>
+                            </div>
+                            <div class="row mr-3">
+                                <h5>
+                                    <a href="{% url 'blog_demo_page' %}" class="blogtitle">Lorem Ipsum is simply dummy text of the printing.</a>
+                                </h5>
+                                <p class="pb-2">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                                </p>
+                                <p>
+                                    <h6>
+                                        <a href="{% url 'blog_demo_page' %}">LATIN LITERATURE</a>
+                                    </h6>
+                                </p>
+                            </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 blogT">
+                        <div class="row mr-2 pb-2">
+                                <a href="{% url 'blog_demo_page' %}">
+                                    <img class="blogImg" src="https://ichef.bbc.co.uk/wwhp/624/cpsprodpb/17065/production/_117890349_gettyimages-1311488747.jpg" alt="logo" width="350px" />
+                                </a>
+                            </div>
+                        <div class="row mr-3">
+                            <h5>
+                                <a href="{% url 'blog_demo_page' %}" class="blogtitle">Lorem Ipsum is simply dummy text of the printing.</a>
+                            </h5>
+                            <p class="pb-2">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                            </p>
+                            <p>
+                                <h6>
+                                    <a href="{% url 'blog_demo_page' %}">LATIN LITERATURE</a>
+                                </h6>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-5 pl-3">
+                <div class="row pl-3">
+                    <h4>
+                        <a href="#" class="blogtitle">Career Resources</a>
+                    </h4>
+                </div>
+                <div class="row pl-3 pt-3">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div class="row mr-2 pb-2">
+                            <a href="{% url 'blog_demo_page' %}">
+                                <img class="blogImg" src="https://ichef.bbc.co.uk/wwhp/624/cpsprodpb/89C4/production/_117886253_hi066657374.jpg" alt="logo" width="350px" />
+                            </a>
+                            </div>
+                        <div class="row mr-3">
+                            <h5>
+                                <a href="{% url 'blog_demo_page' %}" class="blogtitle">Lorem Ipsum is simply dummy text of the printing.</a>
+                            </h5>
+                            <p class="pb-2">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                            </p>
+                            <p>
+                                <h6>
+                                    <a href="{% url 'blog_demo_page' %}">LATIN LITERATURE</a>
+                                </h6>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 blogT blogPT">
+                            <div class="row mr-2 pb-2">
+                                <a href="{% url 'blog_demo_page' %}">
+                                    <img class="blogImg" src="https://ichef.bbc.co.uk/wwhp/624/cpsprodpb/89C4/production/_117886253_hi066657374.jpg" alt="logo" width="350px" />
+                                </a>
+                            </div>
+                            <div class="row mr-3">
+                                <h5>
+                                    <a href="{% url 'blog_demo_page' %}" class="blogtitle">Lorem Ipsum is simply dummy text of the printing.</a>
+                                </h5>
+                                <p class="pb-2">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                                </p>
+                                <p>
+                                    <h6>
+                                        <a href="{% url 'blog_demo_page' %}">LATIN LITERATURE</a>
+                                    </h6>
+                                </p>
+                            </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 blogT">
+                        <div class="row mr-2 pb-2">
+                                <a href="{% url 'blog_demo_page' %}">
+                                    <img class="blogImg" src="https://ichef.bbc.co.uk/wwhp/624/cpsprodpb/89C4/production/_117886253_hi066657374.jpg" alt="logo" width="350px" />
+                                </a>
+                            </div>
+                        <div class="row mr-3">
+                            <h5>
+                                <a href="{% url 'blog_demo_page' %}" class="blogtitle">Lorem Ipsum is simply dummy text of the printing.</a>
+                            </h5>
+                            <p class="pb-2">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                            </p>
+                            <p>
+                                <h6>
+                                    <a href="{% url 'blog_demo_page' %}">LATIN LITERATURE</a>
+                                </h6>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-5 pl-3">
+                <div class="row pl-3">
+                    <h4>
+                        <a href="#" class="blogtitle">JobWorth FAQ</a>
+                    </h4>
+                </div>
+                <div class="row pl-3 pt-3">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div class="row mr-2 pb-2">
+                            <a href="{% url 'blog_demo_page' %}">
+                                <img class="blogImg" src="https://ychef.files.bbci.co.uk/width/790/p09cxdzh.jpg" alt="logo" width="350px" />
+                            </a>
+                            </div>
+                        <div class="row mr-3">
+                            <h5>
+                                <a href="{% url 'blog_demo_page' %}" class="blogtitle">Why is JobWorth offering more resume template design?</a>
+                            </h5>
+                            <p class="pb-2">
+                                There are many ways to tell the same story from a Candidate. Resume design determines how the story gets told.
+                            </p>
+                            <p>
+                                <h6>
+                                    <a href="{% url 'blog_demo_page' %}">LATIN LITERATURE</a>
+                                </h6>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 blogT blogPT">
+                            <div class="row mr-2 pb-2">
+                                <a href="{% url 'blog_demo_page' %}">
+                                    <img class="blogImg" src="https://ychef.files.bbci.co.uk/width/790/p09cxdzh.jpg" alt="logo" width="350px" />
+                                </a>
+                            </div>
+                            <div class="row mr-3">
+                                <h5>
+                                    <a href="{% url 'blog_demo_page' %}" class="blogtitle">Lorem Ipsum is simply dummy text of the printing.</a>
+                                </h5>
+                                <p class="pb-2">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                                </p>
+                                <p>
+                                    <h6>
+                                        <a href="{% url 'blog_demo_page' %}">LATIN LITERATURE</a>
+                                    </h6>
+                                </p>
+                            </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 blogT">
+                        <div class="row mr-2 pb-2">
+                                <a href="{% url 'blog_demo_page' %}">
+                                    <img class="blogImg" src="https://ychef.files.bbci.co.uk/width/790/p09cxdzh.jpg" alt="logo" width="350px" />
+                                </a>
+                            </div>
+                        <div class="row mr-3">
+                            <h5>
+                                <a href="{% url 'blog_demo_page' %}" class="blogtitle">Lorem Ipsum is simply dummy text of the printing.</a>
+                            </h5>
+                            <p class="pb-2">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                            </p>
+                            <p>
+                                <h6>
+                                    <a href="{% url 'blog_demo_page' %}">LATIN LITERATURE</a>
+                                </h6>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row pt-5 pl-3">
+                <div class="row pl-3">
+                    <h4>
+                        <a href="#" class="blogtitle">Testimonial</a>
+                    </h4>
+                </div>
+                <div class="row pl-3 pt-3">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div class="row mr-3 pb-2">
+                            <a href="{% url 'blog_demo_page' %}">
+                                <img class="blogImg" src="https://ychef.files.bbci.co.uk/432x243/p09cz5gt.jpg" alt="logo" width="350px" />
+                            </a>
+                            </div>
+                        <div class="row mr-3">
+                            <h5>
+                                <a href="{% url 'blog_demo_page' %}" class="blogtitle">Lorem Ipsum is simply dummy text of the printing.</a>
+                            </h5>
+                            <p class="pb-2">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                            </p>
+                            <p>
+                                <h6>
+                                    <a href="{% url 'blog_demo_page' %}">LATIN LITERATURE</a>
+                                </h6>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 blogT blogPT">
+                            <div class="row mr-2 pb-2">
+                                <a href="{% url 'blog_demo_page' %}">
+                                    <img class="blogImg" src="https://ychef.files.bbci.co.uk/432x243/p09cz5gt.jpg" alt="logo" width="350px" />
+                                </a>
+                            </div>
+                            <div class="row mr-3">
+                                <h5>
+                                    <a href="{% url 'blog_demo_page' %}" class="blogtitle">Lorem Ipsum is simply dummy text of the printing.</a>
+                                </h5>
+                                <p class="pb-2">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                                </p>
+                                <p>
+                                    <h6>
+                                        <a href="{% url 'blog_demo_page' %}">LATIN LITERATURE</a>
+                                    </h6>
+                                </p>
+                            </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 blogT">
+                        <div class="row mr-2 pb-2">
+                                <a href="{% url 'blog_demo_page' %}">
+                                    <img class="blogImg" src="https://ychef.files.bbci.co.uk/432x243/p09cz5gt.jpg" alt="logo" width="350px" />
+                                </a>
+                            </div>
+                        <div class="row mr-3">
+                            <h5>
+                                <a href="{% url 'blog_demo_page' %}" class="blogtitle">Lorem Ipsum is simply dummy text of the printing.</a>
+                            </h5>
+                            <p class="pb-2">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                            </p>
+                            <p>
+                                <h6>
+                                    <a href="{% url 'blog_demo_page' %}">LATIN LITERATURE</a>
+                                </h6>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--job listing filter  wrapper end-->
+
+    <script src="{% static 'dashboard/js/google_translate.js' %}"></script>
+	<script src="{% static 'dashboard/js/lang_translate.js' %}"></script>
+   
+
+{% endblock content %}
+
+</body>

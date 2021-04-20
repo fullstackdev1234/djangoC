@@ -1,0 +1,236 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+
+    <!-- top header wrapper start -->
+    <div class="page_title_section">
+
+        <div class="page_header">
+            <div class="container">
+                <div class="row">
+                    <!-- section_heading start -->
+                    <div class="col-lg-9 col-md-8 col-12 col-sm-7">
+
+                        <h1>Verify Email</h1>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-12 col-sm-5">
+                        <div class="sub_title_section">
+                            <ul class="sub_title">
+                                <li> <a href="#"> Home </a>&nbsp; / &nbsp; </li>
+                                <li>Verify Email</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- top header wrapper end -->
+    <!-- login wrapper start -->
+    <div class="login_wrapper jb_cover">
+        <div class="container">
+            <div class="row rowMB">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="login_top_box jb_cover">
+                        <div class="login_banner_wrapper">
+                            <img src="{% static 'images/logo.png'%}" alt="logo">
+                        </div>
+                        <div class="login_form_wrapper reset_pwd">
+                            <div class="form-group icon_form comments_form mb-0">
+                                <h2>Enter OTP here</h2>
+                            </div>
+                            <div class="form-group icon_form comments_form otp">
+                                <h6>We have sent one time password (OTP) to</h6>
+                            </div>
+                            <div class="form-group icon_form comments_form">
+                                <h6 class="email_TT"><b>abcd@gmail.com</b></h6>
+                            </div>
+                            <div class="countDown">
+                                <div class="form-group icon_form comments_form vertical-align">
+                                    <div class="row mx-auto">
+                                        <div class="col-3">
+                                            <input  id="otp1"  type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" inputmode="numeric" maxLength="1" size="1" min="0" max="9"  onkeyup="onKeyUpEvent(1,event)" onfocus="onFocusEvent(1)" >
+                                        </div>
+                                        <div class="col-3">
+                                            <input id="otp2" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" inputmode="numeric" maxLength="1" size="1" min="0" max="9"  onkeyup="onKeyUpEvent(2,event)" onfocus="onFocusEvent(2)">
+                                        </div>
+                                        <div class="col-3">
+                                            <input id="otp3" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" inputmode="numeric" maxLength="1" size="1" min="0" max="9"  onkeyup="onKeyUpEvent(3,event)" onfocus="onFocusEvent(3)">
+                                        </div>
+                                        <div class="col-3">
+                                            <input id="otp4" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" inputmode="numeric" maxLength="1" size="1" min="0" max="9"   onkeyup="onKeyUpEvent(4,event)" onfocus="onFocusEvent(4)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group icon_form comments_form mb-0">
+                                    <p id="clockdiv">
+                                        <span class="minutes" ></span>
+                                        <span class="valid">:</span> 
+                                        <span  class="seconds"></span>
+                                    </p>
+                                </div>
+                                <div class="header_btn search_btn login_btn jb_cover mb-0">
+                                    <a href="#">Verify OTP</a>
+                                </div>
+                            </div>
+                            <div class="resendotp d-none">
+                                <div class="dont_have_account jb_cover mb-3">
+                                    <a href="#">Not Received OTP?</a>
+                                </div>
+                                <div class="form-group icon_form comments_form ">
+                                    <h6>refresh your email</h6>
+                                </div>
+                                <div class="form-group icon_form comments_form mb-0">
+                                    <h6>Check your junk folder</h6>
+                                </div>
+                                <div class="header_btn search_btn login_btn jb_cover mb-0">
+                                    <a href="#" class="resendBtn">Click to resend OTP</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login wrapper end -->
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            setTimeout(function() {
+                   $('.countDown').hide();
+                   $('.resendotp').removeClass('d-none');
+                }, 60000);
+
+            //Resend Btn Click Function
+            $('.resendBtn').on('click',function(){
+
+                $('.resendotp').addClass('d-none');
+                $('.countDown').show();
+
+                setTimeout(function() {
+                   $('.countDown').hide();
+                   $('.resendotp').removeClass('d-none');
+                }, 60000);
+
+                //countdowntimer
+                function getTimeRemaining(endtime) {
+                            const total = Date.parse(endtime) - Date.parse(new Date());
+                            const seconds = Math.floor((total / 1000) % 60);
+                            const minutes = Math.floor((total / 1000 / 60) % 60);
+                            
+                            return {
+                                total,
+                                minutes,
+                                seconds
+                            };
+                        }
+
+                function initializeClock(id, endtime) {
+                    const clock = document.getElementById(id);
+                    const minutesSpan = clock.querySelector('.minutes');
+                    const secondsSpan = clock.querySelector('.seconds');
+
+                    function updateClock() {
+                        const t = getTimeRemaining(endtime);
+                        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                        if (t.total <= 0) {
+                        clearInterval(timeinterval);
+                        }
+                    }
+                    updateClock();
+                    const timeinterval = setInterval(updateClock, 1000);
+                }
+
+                const timeInMinutes = 1;
+                const currentTime = Date.parse(new Date());
+                deadline = new Date(currentTime + timeInMinutes*60*1000);
+                initializeClock('clockdiv', deadline);
+
+            });
+            
+        });
+
+
+        //countdowntimer
+        function getTimeRemaining(endtime) {
+                    const total = Date.parse(endtime) - Date.parse(new Date());
+                    const seconds = Math.floor((total / 1000) % 60);
+                    const minutes = Math.floor((total / 1000 / 60) % 60);
+                    
+                    return {
+                        total,
+                        minutes,
+                        seconds
+                    };
+                }
+
+        function initializeClock(id, endtime) {
+            const clock = document.getElementById(id);
+            const minutesSpan = clock.querySelector('.minutes');
+            const secondsSpan = clock.querySelector('.seconds');
+
+            function updateClock() {
+                const t = getTimeRemaining(endtime);
+                minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                if (t.total <= 0) {
+                clearInterval(timeinterval);
+                }
+            }
+            updateClock();
+            const timeinterval = setInterval(updateClock, 1000);
+        }
+
+        const timeInMinutes = 1;
+        const currentTime = Date.parse(new Date());
+        deadline = new Date(currentTime + timeInMinutes*60*1000);
+        initializeClock('clockdiv', deadline);
+
+        // onKeyUpEvent
+        function getCodeBoxElement(index) {
+                return document.getElementById('otp' + index);
+            }
+
+        function onKeyUpEvent(index,event){
+            const eventCode = event.which || event.keyCode;
+                if (getCodeBoxElement(index).value.length === 1) {
+                    if (index !== 4) {
+                        getCodeBoxElement(index + 1).focus();
+                    } 
+                    else {
+                        getCodeBoxElement(index).blur();
+                        // Submit code
+                        $('#btn_verify').removeClass('d-none');
+                        
+                    }
+                }
+            if (eventCode === 8 && index !== 1) {
+                getCodeBoxElement(index - 1).focus();
+                $('#btn_verify').addClass('d-none');
+            }
+        }
+
+        //onfocusEvent
+        function onFocusEvent(index) {
+            for (item = 1; item < index; item++) {
+                const currentElement = getCodeBoxElement(item);
+                if (!currentElement.value) {
+                    currentElement.focus();
+                    break;
+                }
+            }
+        }
+
+    </script>
+
+
+    {% endblock content %}
+    

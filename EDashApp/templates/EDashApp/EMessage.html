@@ -1,0 +1,182 @@
+{% extends 'base_dashboard.html' %}
+{% load static %}
+
+
+{% block header_content %}
+  
+ <div class="page_title_section">
+
+        <div class="page_header">
+            <div class="container">
+                <div class="row">
+                    <!-- section_heading start -->
+                    <div class="col-xl-9 col-lg-7 col-md-7 col-12 col-sm-12">
+
+                        <h1>message</h1>
+                    </div>
+                    <div class="col-xl-3 col-lg-5 col-md-5 col-12 col-sm-12">
+                        <div class="sub_title_section">
+                            <ul class="sub_title">
+                                <li> <a href="#"> Home </a>&nbsp; / &nbsp; </li>
+                                <li>message</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock header_content %}
+
+{% block dash_content %}
+
+             <div class="col-lg-9 col-md-12 col-sm-12 col-12">
+                    <div class="dashboard-message-wrapper">
+                        <div class="message-lists">
+                            <form action="#" class="message-search">
+                                <input type="text" placeholder="Search Friend......">
+                                <button><i class="fas fa-search"></i></button>
+                            </form>
+                            <a href="#" class="message-single">
+                                <div class="thumb">
+                                    <img src="images/rc1.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="body">
+                                    <h6 class="username">Laural K.</h6>
+                                    <span class="send-time">12 min</span>
+                                </div>
+                            </a>
+                            <a href="#" class="message-single">
+                                <div class="thumb">
+                                    <img src="images/rc2.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="body">
+                                    <h6 class="username">Paul Cox</h6>
+                                    <span class="send-time">22 min</span>
+                                </div>
+                            </a>
+                            <a href="#" class="message-single active">
+                                <div class="thumb">
+                                    <img src="images/rc3.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="body">
+                                    <h6 class="username">Carlos</h6>
+                                    <span class="text-number">16 min</span>
+                                </div>
+                            </a>
+                            <a href="#" class="message-single">
+                                <div class="thumb">
+                                    <img src="images/rc4.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="body">
+                                    <h6 class="username">Dahlia</h6>
+                                    <span class="send-time">45 min</span>
+                                </div>
+                            </a>
+                            <a href="#" class="message-single">
+                                <div class="thumb">
+                                    <img src="images/rs5.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="body">
+                                    <h6 class="username">Nathan</h6>
+                                    <span class="send-time">45 min</span>
+                                </div>
+                            </a>
+                            <a href="#" class="message-single">
+                                <div class="thumb">
+                                    <img src="images/rs4.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="body">
+                                    <h6 class="username">nicloss</h6>
+                                    <span class="send-time">26 min</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="message-box">
+                            <div class="message-box-header">
+
+                                <h5>carlos</h5>
+                                <div class="navbar navbar-expand-sm drop">
+
+                                    <!-- Links -->
+                                    <ul class="navbar-nav">
+
+                                        <!-- Dropdown -->
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-h"></i>
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#"><i class="fa fa-link"></i>&nbsp;&nbsp;Copy this link</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-tag"></i>&nbsp;&nbsp;Report</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-flag"></i>&nbsp;&nbsp;Hide</a>
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="dashboard-conversation">
+                                <li class="conversation in">
+                                    <div class="avater">
+                                        <img src="images/rc3.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="message"><span>This is Photoshop's version  of Lom Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis </span></div>
+                                    <span class="send-time">2.32 am</span>
+                                </li>
+                                <li class="conversation out">
+                                    <div class="avater">
+                                        <img src="images/rc1.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="message"><span>This is Photoshop's version  of Lom Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis </span></div>
+                                    <span class="send-time">2.32 am</span>
+                                </li>
+                                <li class="conversation in">
+                                    <div class="avater">
+                                        <img src="images/rc3.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="message"><span>This is Photoshop's version  of Lom Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis </span></div>
+                                    <span class="send-time">2.34 am</span>
+                                </li>
+                                <li class="conversation out">
+                                    <div class="avater">
+                                        <img src="images/rc1.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="message"><span>This is Photoshop's version  of Lom Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis </span></div>
+                                    <span class="send-time">2.34 am</span>
+                                </li>
+                                <li class="conversation in">
+                                    <div class="avater">
+                                        <img src="images/rc3.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="message"><span>This is Photoshop's version  of Lom Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis </span></div>
+                                    <span class="send-time">2.34 am</span>
+                                </li>
+
+                            </ul>
+                            <div class="conversation-write-wrap">
+                                <form action="#">
+                                    <textarea placeholder="Type a message"></textarea>
+                                    <label class="send-file">
+                                        <input type="file"><i class="fas fa-image"></i>
+                                    </label>
+                                    <label class="send-image">
+                                        <input type="file"><i class="fas fa-file-image"></i>
+                                    </label>
+
+                                    <button class="send-message"><i class="fas fa-location-arrow"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+{% endblock dash_content %}
+
+
+
+
+
+ 
+    <!-- newsletter wrapper end -->
+
